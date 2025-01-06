@@ -1,0 +1,17 @@
+#APCS 202501 Q.1 等紅綠燈
+a, b = map(int, input().split())
+n = int(input())
+WR = 0
+
+
+seconds = list(map(int, input().split()))
+
+
+for i in range(n):
+    second = seconds[i]
+    if second % (a + b) >= a:
+        WR += (a + b) - (second % (a + b))
+    else:
+        WR += 0  
+
+print(WR)
